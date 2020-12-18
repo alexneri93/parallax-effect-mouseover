@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Parallax MouseMove Effect Demo</title>
+    <style>
+      body{
+        margin:0;
+        padding:0;
+        overflow: hidden;
+      }
+      [data-parallax]{
+        position: relative;
+        width: 100vw;
+        height: 100vh;
+      }
+      [data-parallax] > *{
+        position: absolute;
+        width: 50%;
+        height: 50%;
+        left: 25%;
+        top: 25%;        
+      }
+      [data-parallax] .img{
+        position: absolute;
+      }
+      [data-parallax] .img--center{
+        left: 50%;
+        transform: translateX(-50%);
+      }
+      [data-parallax] .img--bottom{
+        bottom: 0;
+      }
+      [data-parallax] .img--right{
+        right: 0;
+      }
+      .bg-blue{
+        background: #00c6ff;
+        background: linear-gradient(0deg, #00c6ff 0%, #0072ff 100%);
+      }
+    </style>
+    <script>
+      window.addEventListener("load", function(){
+        var parallaxnodes = document.querySelectorAll("[data-parallax]");
+        for(var i=0; i<parallaxnodes.length; i++){
+          var children = parallaxnodes[i].children;
+          for(var n=0; n<children.length; n++){
+            children[n].setAttribute("data-index", n+2);
+          }
+          parallaxnodes[i].addEventListener("mousemove", function(e){
+            var elements = this.children;
+            for(var c=0; c<elements.length; c++){
+              var divisor = parseInt(elements[c].getAttribute("data-index"));
+              var startPosX = this.offsetWidth/4;
+              var startPosY = this.offsetHeight/8;
+              elements[c].style.left = startPosX-(((e.screenX/divisor)-e.clientX)/3)+"px";
+              elements[c].style.top = startPosY-(((e.screenY/divisor)-e.clientY)/3)+"px";
+            }
+          });
+        }
+      });
+    </script>
+  </head>
+  <body>
+    <article data-parallax class="bg-blue">
+      <div>        
+        <img src="img/cartoon_cloud.png" width="200" class="img img--right"/>
+      </div>
+      <div>
+        <img src="img/cartoon_cloud.png" width="450" class="img"/>
+      </div>
+      <div>
+        <img src="img/cartoon_cloud.png" width="350" class="img img--right img--bottom"/>
+      </div>
+      <div>
+        <img src="img/cartoon_mario.png" width="300" class="img img--bottom img--center"/>
+      </div>
+    </article>
+  </body>
+</html>

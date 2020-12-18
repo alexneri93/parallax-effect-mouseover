@@ -16,14 +16,15 @@ Just add content that you want in the divs that are inside the article with "dat
 
 ## Demo
 Demo: [https://codepen.io/alexneri/pen/BaLZZBq](https://codepen.io/alexneri/pen/BaLZZBq)
+Also the archives inmdex.html and parallax_image_demo.html in this repo includes a demo.
 
 ## Authors
 
-* **Alejandro Neri** - *Initial work* - [alexneri93](https://github.com/alexneri93)
+* **Alejandro Neri** - [alexneri93](https://github.com/alexneri93)
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
 
 ## Acknowledgments
 
