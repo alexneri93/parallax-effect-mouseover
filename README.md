@@ -1,11 +1,11 @@
 # Parallax effect - Mouseover
 
-How to make a parallax effect when you move the cursos in the screen.
+How to make a parallax effect when you move the cursor in the screen.
 I used JS and CSS to attain that.
 
 ## Getting Started
 
-Just add content that you want in the divs that are inside the article with "data-parallax".
+Just add the content that you want in the divs that are inside the article with "data-parallax".
 ```
 <article data-parallax class="bg-blue">
       <div>        
@@ -16,7 +16,7 @@ Just add content that you want in the divs that are inside the article with "dat
 
 ## Demo
 Demo: [https://codepen.io/alexneri/pen/BaLZZBq](https://codepen.io/alexneri/pen/BaLZZBq)
-Also the archives inmdex.html and parallax_image_demo.html in this repo includes a demo.
+See the [demo.html](demo.html) file for details
 
 ## Authors
 
